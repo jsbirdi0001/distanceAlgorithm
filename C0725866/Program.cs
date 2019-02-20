@@ -11,7 +11,8 @@ namespace C0725866
     {
         static void Main(string[] args)
         {
-            
+            var a = new CountrySide();
+            a.Run();
         }
     }
     class mr
@@ -68,7 +69,7 @@ namespace C0725866
             Alst.distanceToWestVillage = 19;
 
         }
-        public Village travelVillages(Village CurrentVillage)
+        public Village travelVillages(Village currentVillage)
         {
 
         }
