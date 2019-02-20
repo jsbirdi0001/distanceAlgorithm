@@ -15,7 +15,7 @@ namespace C0725866
         }
     }
     class mr
-    {
+    { 
         public void motivator()
         {
             Console.WriteLine("Trace");
