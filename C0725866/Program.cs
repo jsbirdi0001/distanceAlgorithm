@@ -65,12 +65,50 @@ namespace C0725866
             Village Alst = new Village("Alst", false);
             Village Schvenig = new Village("Schvenig", false);
             Village Wessig = new Village("Wessig", false);
+            Village Maeland = new Village("Maeland", false);
+            Village Helmholtz = new Village("Helmholtz", false);
+            Village Uster = new Village("Uster", true);
+            Village Badden = new Village("Badden", false);
+
             Alst.west = Schvenig;
             Alst.east = Wessig;
-            Alst.distanceToEastVillage = 14;
-            Alst.distanceToWestVillage = 19;
+            Alst.distanceToEastVillage = 19;
+            Alst.distanceToWestVillage = 14;
+
+            Schvenig.west = Maeland;
+            Schvenig.east = Helmholtz;
+            Schvenig.distanceToWestVillage = 9;
+            Schvenig.distanceToEastVillage = 28;
+            
+            Wessig.west = Uster;
+            Wessig.east = Badden;
+            Wessig.distanceToWestVillage = 28;
+            Wessig.distanceToEastVillage = 11;
 
         }
+
+        void SearchForAstrilde(Village root)
+        {
+            try
+            {
+                if (root.isAstrildgeHere)
+                {
+                    Console.WriteLine("Found Astrilde in: {0}", root.VillageName); return;
+                }
+
+            }
+            catch (NullReferenceException nre)
+            {
+                Console.WriteLine("encountered Null Object ");
+            }
+            if(root == null)
+            {
+                return;
+            }
+            SearchForAstrilde(root.west);
+            SearchForAstrilde(root.east);
+        }
+
         //public Village travelVillages(Village currentVillage)
         //{
         //
