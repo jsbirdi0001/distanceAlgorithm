@@ -15,6 +15,7 @@ namespace C0725866
             a.Run();
         }
     }
+    /*
     class mr
     { 
         public void motivator()
@@ -25,6 +26,7 @@ namespace C0725866
             motivator();
         }
     }
+    */
     class UsingRecursion
     {
         // Create an application which 
@@ -69,10 +71,10 @@ namespace C0725866
             Alst.distanceToWestVillage = 19;
 
         }
-        public Village travelVillages(Village currentVillage)
-        {
-
-        }
+        //public Village travelVillages(Village currentVillage)
+        //{
+        //
+        //}
 
 
         class Village
