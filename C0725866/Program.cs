@@ -116,18 +116,24 @@ namespace C0725866
 
 
         class Village
-        {
-            public Village(string _villageName, bool _isAHere)
+{
+
+        public Village(string _villageName, bool _isAHere)
             {
                 isAstrildgeHere = _isAHere;
                 VillageName = _villageName;
+            }
+            public void VillageSetup(int _prevVillageDist, Village _westVillage, Village _eastVillage)
+            {
+                east = _eastVillage;
+                west = _westVillage;
+                distanceFromPreviousVillage = _prevVillageDist;
             }
 
             public Village west;
             public Village east;
             public string VillageName;
-            public int distanceToWestVillage;
-            public int distanceToEastVillage;
+            public int distanceFromPreviousVillage;
             public bool isAstrildgeHere;
         }
     }
